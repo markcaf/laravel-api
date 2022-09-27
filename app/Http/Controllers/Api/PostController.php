@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('user', 'tags')->get();
 
         return response()->json([
             'response' => true,
@@ -55,7 +55,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
+        $post = Post::with('user', 'tags')->find($id);
 
         if ($post) return response()->json([
             'response' => true,
