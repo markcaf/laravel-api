@@ -2,12 +2,12 @@
   <main>
     <div class="container">
       <div class="row mt-5">
-        <div class="colmt-5">
+        <div class="col mt-5">
             <h1>Recent posts:</h1>
             <div class="posts">
-                <ul>
+                <div class="row">
                     <PostCard v-for="post in posts" :key="post.id" :post="post" />
-                </ul>
+                </div>
             </div>
         </div>
       </div>
