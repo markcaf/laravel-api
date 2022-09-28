@@ -25,4 +25,7 @@ Route::namespace('Api')->group(function(){
 
     Route::get('/tags', 'TagController@index');
     Route::get('/tags/{id}', 'TagController@show');
+
+    Route::get('/users', 'UserController@index');
+    Route::get('/users/{id}', 'UserController@show');
 });
