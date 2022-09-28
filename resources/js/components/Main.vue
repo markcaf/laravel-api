@@ -9,6 +9,12 @@
                     <PostCard v-for="post in posts" :key="post.id" :post="post" />
                 </div>
             </div>
+
+            <div class="d-flex align-items-center justify-content-around mb-5 mt-3">
+                <a :class="currentPage != 1 ? '' : 'disabled'" class="btn btn-primary" @click="getPrevPage(), getPosts()">Prev Page</a>
+                <div class="ms_current_page font-weight-bold">{{currentPage}}</div>
+                <a :class="currentPage >= 9 ? 'disabled' : ''" class="btn btn-primary" @click="getNextPage(), getPosts()">Next Page</a>
+            </div>  
         </div>
       </div>
     </div>
@@ -36,11 +42,19 @@ export default {
 
     methods: {
 
-        getPosts(postsPage = 1){
+        getNextPage() {
+            this.currentPage++;   
+        },
+        getPrevPage() {
+            this.currentPage--;
+        },
+
+        getPosts(){
             axios.get('/api/posts' , {
-                page: postsPage
+                params: {
+                    page: this.currentPage,
+                }
             }).then((response) => {
-                console.log(response.data.results);
                 this.posts = response.data.results.data;
                 this.currentPage = response.data.results.current_page;
                 this.lastPage = response.data.results.last_page;
@@ -57,5 +71,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang='scss' scoped>
+    .ms_current_page{
+        font-size: 20px;
+    }
 </style>
