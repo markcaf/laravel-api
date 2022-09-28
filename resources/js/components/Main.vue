@@ -74,5 +74,9 @@ export default {
 <style lang='scss' scoped>
     .ms_current_page{
         font-size: 20px;
+        border: 2px solid;
+        border-color: #3490DC;
+        border-radius: 100px;
+        padding: 5px 15px;
     }
 </style>

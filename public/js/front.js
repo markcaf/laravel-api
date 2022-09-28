@@ -2148,7 +2148,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ms_current_page[data-v-b9c20fb8] {\n  font-size: 20px;\n}", ""]);
+exports.push([module.i, ".ms_current_page[data-v-b9c20fb8] {\n  font-size: 20px;\n  border: 2px solid;\n  border-color: #3490DC;\n  border-radius: 100px;\n  padding: 5px 15px;\n}", ""]);
 
 // exports
 
