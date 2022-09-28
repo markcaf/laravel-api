@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="container">
-      <div class="row mt-5">
+      <div class="row">
         <div class="col mt-5">
             <h1>Recent posts:</h1>
             <div class="posts">

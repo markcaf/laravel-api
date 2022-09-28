@@ -2019,7 +2019,7 @@ var render = function render() {
   return _c("main", [_c("div", {
     staticClass: "container"
   }, [_c("div", {
-    staticClass: "row mt-5"
+    staticClass: "row"
   }, [_c("div", {
     staticClass: "col mt-5"
   }, [_c("h1", [_vm._v("Recent posts:")]), _vm._v(" "), _c("div", {
